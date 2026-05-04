@@ -1,0 +1,7 @@
+/* 
+  IMPORTANT: Do NOT add overflow: hidden here.
+  It breaks position: sticky on the Hero canvas scroll animation.
+*/
+.app {
+    width: 100%;
+}

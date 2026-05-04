@@ -1,0 +1,75 @@
+.cta-banner {
+    padding: 140px 80px;
+    background: var(--surface);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-decorator {
+    width: 1px;
+    height: 80px;
+    background: var(--border);
+    margin-bottom: 48px;
+}
+
+.cta-heading {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #fff;
+    max-width: 800px;
+    line-height: 1.2;
+}
+
+.cta-subtext {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin: 24px 0 48px;
+}
+
+.cta-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.primary-btn {
+    background: #fff;
+    color: #000;
+    border-radius: 999px;
+    padding: 16px 48px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.secondary-btn {
+    background: transparent;
+    color: #fff;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 16px 48px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.secondary-btn:hover {
+    border-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .cta-banner {
+        padding: 80px 40px;
+    }
+    .cta-actions {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+    .primary-btn, .secondary-btn {
+        width: 100%;
+        padding: 14px 20px;
+    }
+}

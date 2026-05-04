@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg:          #0a0a0a;
+  --surface:     #111111;
+  --surface2:    #1a1a1a;
+  --border:      rgba(255,255,255,0.08);
+  --glass-bg:    rgba(255,255,255,0.05);
+  --glass-blur:  blur(20px);
+  --text:        #FFFFFF;
+  --text-muted:  #A0A0A0;
+  --text-dim:    #555555;
+  --accent:      #D6D6D6;
+  --font-display: 'Cinzel', serif;
+  --font-body:    'DM Sans', sans-serif;
+  --radius:      12px;
+  --radius-pill: 999px;
+  --transition:  0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { 
+    background: var(--bg); 
+    color: var(--text); 
+    font-family: var(--font-body);
+}
+
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: 0.05em; }
+
+/* Glass mixin — apply as class */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Placeholder for images */
+.placeholder-gradient {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dim);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: var(--transition);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}

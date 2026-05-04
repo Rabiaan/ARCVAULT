@@ -1,0 +1,141 @@
+.projects-section {
+    padding: 120px 80px;
+    background: var(--surface);
+}
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 48px;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    border-radius: 999px;
+    padding: 8px 24px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+.filter-btn.active {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--border);
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background: var(--surface);
+}
+
+.project-card.large {
+    grid-column: span 2;
+}
+
+.project-image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 0;
+    border: none;
+}
+
+.project-card:hover .project-overlay {
+    transform: translateY(0);
+}
+
+.project-category {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+}
+
+.project-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.project-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.dot {
+    color: var(--text-dim);
+}
+
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .project-card.large {
+        grid-column: span 2;
+    }
+    .projects-section {
+        padding: 80px 40px;
+    }
+}
+
+@media (max-width: 640px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .project-card.large {
+        grid-column: span 1;
+    }
+    .projects-section {
+        padding: 60px 20px;
+    }
+    .project-overlay {
+        padding: 24px;
+    }
+}

@@ -1,0 +1,247 @@
+.projects-page {
+    min-height: 100vh;
+    background: #0a0a0a;
+    color: #fff;
+    overflow: visible;
+}
+
+.page-hero {
+    padding: 120px 0 60px;
+    background: linear-gradient(to bottom, rgba(10, 10, 10, 0.9), transparent);
+    text-align: center;
+}
+
+.page-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: #fff;
+    font-weight: 300;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.section-label {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    color: #888;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #888;
+    padding: 8px 24px;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+.filter-btn.active {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.projects-page-content {
+    padding: 60px 0 40px;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    perspective: 1000px;
+    padding-bottom: 5vh;
+}
+
+.stack-card {
+    position: sticky;
+    top: 18vh;
+    width: 90vw;
+    max-width: 1200px;
+    height: 70vh;
+    margin-top: 15px;
+    transform-origin: center top;
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    opacity: 0;
+    transform: translateY(150px) scale(0.98);
+    will-change: transform, opacity;
+}
+
+.stack-card.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    background: #161616;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius);
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.card-text {
+    flex: 1;
+    padding: clamp(20px, 5vw, 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.card-number {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: rgba(255, 255, 255, 0.1);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: #fff;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.card-location {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: #666;
+    letter-spacing: 0.1em;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.card-description {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #aaa;
+    max-width: 400px;
+    margin-bottom: 40px;
+}
+
+.view-project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: #fff;
+    text-decoration: none;
+    margin-top: auto;
+    transition: gap 0.3s ease;
+}
+
+.view-project-link:hover {
+    gap: 20px;
+}
+
+.card-image-container {
+    flex: 1.2;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.5s ease;
+}
+
+.stack-card.active .card-img {
+    transform: scale(1.05);
+}
+
+.aura-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 6px 14px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 0.7rem;
+    font-family: var(--font-body);
+}
+
+.aura-icon {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 0.55rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .card-content {
+        flex-direction: column;
+    }
+    .card-text {
+        padding: 30px;
+        flex: none;
+    }
+    .card-image-container {
+        flex: 1;
+    }
+    .stack-card {
+        height: auto;
+        min-height: 80vh;
+        margin-bottom: 60vh;
+    }
+}
+
+@media (max-width: 640px) {
+    .stack-card {
+        width: 95vw;
+        top: 5vh;
+    }
+    .page-title {
+        font-size: 3rem;
+    }
+}

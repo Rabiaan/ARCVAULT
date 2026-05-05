@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { services } from '../data/siteData';
 import * as LucideIcons from 'lucide-react';
+import Footer from '../components/Footer';
 import './ServicesPage.css';
 
 const ServicesPage = () => {
@@ -52,6 +53,7 @@ const ServicesPage = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

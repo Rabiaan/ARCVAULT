@@ -1,4 +1,5 @@
 import { siteConfig } from '../data/siteData';
+import Footer from '../components/Footer';
 import './ContactPage.css';
 
 const ContactPage = () => {
@@ -30,25 +31,26 @@ const ContactPage = () => {
                             </div>
                         </div>
                         
-                        <form className="contact-form">
-                            <div className="form-group">
-                                <input type="text" placeholder="Name" required />
-                            </div>
-                            <div className="form-group">
-                                <input type="email" placeholder="Email" required />
-                            </div>
-                            <div className="form-group">
-                                <input type="text" placeholder="Subject" required />
-                            </div>
-                            <div className="form-group">
-                                <textarea placeholder="Message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" className="submit-btn">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+<form className="contact-form">
+                             <div className="form-group">
+                                 <input type="text" placeholder="Name" required />
+                             </div>
+                             <div className="form-group">
+                                 <input type="email" placeholder="Email" required />
+                             </div>
+                             <div className="form-group">
+                                 <input type="text" placeholder="Subject" required />
+                             </div>
+                             <div className="form-group">
+                                 <textarea placeholder="Message" rows="5" required></textarea>
+                             </div>
+                             <button type="submit" className="submit-btn">Send Message</button>
+                         </form>
+                     </div>
+                 </div>
+             </div>
+             <Footer />
+         </div>
     );
 };
 

@@ -37,7 +37,7 @@ const Navbar = () => {
 
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-            <div className={`nav-container glass ${scrolled ? 'shrunken' : ''}`}>
+            <div className={`nav-container ${scrolled ? 'shrunken' : ''}`}>
                 <div className="nav-logo">
                     <Link to="/">{siteConfig.company}</Link>
                 </div>

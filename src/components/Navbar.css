@@ -32,7 +32,7 @@
 }
 
 .navbar.scrolled .nav-container {
-    width: 50%;
+    width: 60%;
     padding: 10px 24px;
     background: rgba(24, 24, 24, 0.86);
     -webkit-backdrop-filter: blur(20px);

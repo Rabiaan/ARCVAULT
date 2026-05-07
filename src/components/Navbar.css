@@ -18,11 +18,11 @@
     justify-content: space-between;
     gap: 40px;
     padding: 14px 40px;
-    border-radius: 100px;
+    border-radius: 50px;
     /* Fallback color for browsers/environments where backdrop blur is weak or unavailable */
     background: rgba(16, 16, 16, 0.78);
-    backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
     margin: 0 auto;
@@ -33,15 +33,21 @@
     width: 55%;
     padding: 10px 30px;
     background: rgba(24, 24, 24, 0.86);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border-color: rgba(255, 255, 255, 0.25);
 }
 
-@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
     .nav-container {
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
         background: rgba(255, 255, 255, 0.08);
     }
 
     .navbar.scrolled .nav-container {
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
         background: rgba(255, 255, 255, 0.18);
     }
 }
@@ -178,6 +184,7 @@
         overflow: hidden;
         flex-direction: column;
         background: rgba(255, 255, 255, 0.95);
+        -webkit-backdrop-filter: blur(20px);
         backdrop-filter: blur(20px);
         border: 1px solid rgba(0, 0, 0, 0.05);
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);

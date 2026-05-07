@@ -10,19 +10,6 @@
     pointer-events: none;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
-.glass-effect {
-    /* Semi-transparent white background */
-    background: rgba(255, 255, 255, 0.2);
-
-    /* The core blur effect */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Support for Safari */
-
-    /* Optional styling for better effect */
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-}
 
 .nav-container {
     pointer-events: all;
@@ -30,31 +17,34 @@
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-    padding: 12px 30px;
-    border-radius: 16px;
+    padding: 14px 40px;
+    border-radius: 100px;
+    /* Fallback color for browsers/environments where backdrop blur is weak or unavailable */
+    background: rgba(16, 16, 16, 0.78);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
     margin: 0 auto;
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-
-    /* Apply your requested glass background */
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(10px); /* Support for Safari */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
-
 
 .navbar.scrolled .nav-container {
-    width: 95%;
-    padding: 10px 25px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    width: 55%;
+    padding: 10px 30px;
+    background: rgba(24, 24, 24, 0.86);
+    border-color: rgba(255, 255, 255, 0.25);
 }
 
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .nav-container {
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .navbar.scrolled .nav-container {
+        background: rgba(255, 255, 255, 0.18);
+    }
+}
 
 /* ── Logo ── */
 .nav-logo {
@@ -90,7 +80,7 @@
     left: 0;
     width: 0;
     height: 1.5px;
-    background: #fff;
+    background: #000;
     transition: width 0.3s ease;
 }
 
@@ -140,8 +130,8 @@
 }
 
 .quote-btn:hover {
-    background: #333;
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, #863bff, #47bfff);
+    transform: scale(1.05);
 }
 
 /* ── Hamburger ── */
@@ -187,9 +177,8 @@
         height: 0;
         overflow: hidden;
         flex-direction: column;
-        background: rgba(255, 255, 255, 0.75);
-        backdrop-filter: blur(20px) saturate(180%);
-        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
         border: 1px solid rgba(0, 0, 0, 0.05);
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         align-items: center;

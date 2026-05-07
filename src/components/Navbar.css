@@ -21,8 +21,8 @@
     border-radius: 50px;
     /* Fallback color for browsers/environments where backdrop blur is weak or unavailable */
     background: rgba(16, 16, 16, 0.78);
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
     margin: 0 auto;
@@ -35,8 +35,8 @@
     width: 55%;
     padding: 10px 30px;
     background: rgba(24, 24, 24, 0.86);
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     border-color: rgba(255, 255, 255, 0.25);
     transform: translateZ(0);
 }

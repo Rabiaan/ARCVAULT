@@ -32,7 +32,7 @@
 }
 
 .navbar.scrolled .nav-container {
-    width: auto;
+    width: 70%;
     padding: 10px 24px;
     background: rgba(24, 24, 24, 0.86);
     -webkit-backdrop-filter: blur(20px);
@@ -76,6 +76,10 @@
     gap: 36px;
 }
 
+.navbar.scrolled .nav-links {
+    gap: 24px;
+}
+
 .nav-links a {
     font-family: var(--font-body);
     font-size: 0.85rem;
@@ -85,6 +89,10 @@
     position: relative;
     padding: 2px 0;
     transition: all 0.3s ease;
+}
+
+.navbar.scrolled .nav-links a {
+    font-size: 0.75rem;
 }
 
 .nav-links a::after {

@@ -57,7 +57,7 @@ const Navbar = () => {
 
                 <div className="nav-actions">
                     <button className="quote-btn">Get a Quote</button>
-                    <div className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+                    <div className={`hamburger ${mobileMenuOpen ? 'open' : ''}`} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                         <span></span>
                         <span></span>
                         <span></span>

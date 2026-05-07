@@ -78,7 +78,7 @@
 }
 
 .navbar.scrolled .nav-links {
-    gap: 0;
+    gap: 20px;
     margin: 0 auto;
 }
 

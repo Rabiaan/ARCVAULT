@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { ArrowRight, Star, CheckCircle, Clock, DollarSign, MessageCircle, Shield, Eye } from 'lucide-react';
 import Footer from '../components/Footer';
 import './AboutPage.css';
